@@ -14,9 +14,9 @@ $onlyForRoles[$botOwnerID;This command is not for you, it's for my owner(s).]`
     name: "c-eval", 
     code: `$reply[$messageID;yes]
 
-Created ping slash interaction successfully.
+Created eval slash interaction successfully.
 
-$createApplicationCommand[$guildID;eval; For evaluating your functions.;true;slash;code:enter the code.:true:3]
+$createApplicationCommand[$guildID;eval;For evaluating your functions.;true;slash;code:enter the code.:true:3]
 
 $onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission.]`
   }, 
