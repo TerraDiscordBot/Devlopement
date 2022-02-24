@@ -22,11 +22,10 @@ $onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
     name: "exec", 
     prototype: 'slash',
     type: 'interaction', 
-    code: `$interactionFollowUp[
-$eval[$slashOption[code]]]
+    code: `$interactionFollowUp[$exec[$slashOption[code]]]
 
-$onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]
+$interactionDefer
 
-$onlyBotPerms[useappcmds;I'm missing \`USE_APPLICATION_COMMANDS\` permission.]`
+$onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
   }
 ]
