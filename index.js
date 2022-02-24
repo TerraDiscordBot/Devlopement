@@ -22,10 +22,11 @@ files.forEach( x => {
 	require(`./events/${x}`)(bot)
 });
 
-//Commands Loader & Colorful Console
+//Commands Loader
 const loader = new aoijs.LoadCommands(bot)
 loader.load(bot.cmd, "./commands/")
 
+//For Colorful Console
 loader.setColors({
   walking: ["blink", "dim", "fgWhite"],
   failedWalking: {
