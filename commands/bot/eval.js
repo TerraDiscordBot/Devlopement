@@ -24,8 +24,9 @@ $onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
     name: "eval", 
     prototype: 'slash',
     type: 'interaction', 
-    code: `$interactionReply[Output:
-$eval[$slashOption[code]]]
+    code: `$interactionFollowUp[$eval[$slashOption[code];yes;yes;yes;yes]]
+
+$interactionDefer
 
 $onlyForIDs[$botOwnerID;{
 	"content": "This command is not for you, it's for my owner(s).",
