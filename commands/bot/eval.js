@@ -7,18 +7,18 @@ $eval[$message]
 
 $onlyBotPerms[admin;I need \`ADMINISTRATOR\` permission to work without any problem.]
 
-$onlyForRoles[$botOwnerID;This command is not for you, it's for my owner(s).]`
+$onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
 
   },
   {
     name: "c-eval", 
     code: `$reply[$messageID;yes]
 
-Created eval slash interaction successfully.
+Created ping slash interaction successfully.
 
-$createApplicationCommand[$guildID;eval;For evaluating your functions.;true;slash;code:enter the code.:true:3]
+$createApplicationCommand[$guildID;eval; For evaluating your functions.;true;slash;code:enter the code.:true:3]
 
-$onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission.]`
+$onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
   }, 
   {
     name: "eval", 
@@ -27,6 +27,8 @@ $onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission.]`
     code: `$interactionReply[Output:
 $eval[$slashOption[code]]]
 
-$onlyBotPerms[admin;I need \`ADMINISTRATOR\` permission to work without any problem.]`
+$onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]
+
+$onlyBotPerms[useappcmds;I'm missing \`USE_APPLICATION_COMMANDS\` permission.]`
   }
 ]
