@@ -26,6 +26,13 @@ $onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
 
 $interactionDefer
 
-$onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
+$onlyForIDs[$botOwnerID;{
+	"content": "This command is not for you, it's for my owner(s).",
+	"ephemeral": true, 
+	"options":{
+		"interaction" : true
+		}
+	}
+]`
   }
 ]
