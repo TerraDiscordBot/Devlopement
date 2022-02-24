@@ -27,8 +27,22 @@ $onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
     code: `$interactionReply[Output:
 $eval[$slashOption[code]]]
 
-$onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]
+$onlyForIDs[$botOwnerID;{
+	"content": "This command is not for you, it's for my owner(s).",
+	"ephemeral": true, 
+	"options":{
+		"interaction" : true
+		}
+	}
+]
 
-$onlyBotPerms[embedlinks;I need \`EMBED_LINKS\` permission.]`
+$onlyBotPerms[embedlinks;{
+	"content": "I need \`EMBED_LINKS\` permission.",
+	"ephemeral": true, 
+	"options":{
+		"interaction" : true
+		}
+	}
+]`
   }
 ]
