@@ -24,6 +24,12 @@ $onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission to create it.]`
     type: 'interaction', 
     code: `$interactionReply[$replaceText[$userAvatar[$interactionData[options.data[0].value];undefined;$authorAvatar]]]
     
-$onlyBotPerms[embedlinks;I need \`EMBED_LINKS\` permission.]`
+$onlyBotPerms[embedlinks;{
+	"content": "I need \`EMBED_LINKS\` permission.",
+	"options":{
+		"interaction" : true
+		}
+	}
+]`
   }
 ]
