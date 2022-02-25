@@ -1,7 +1,7 @@
 module.exports = [
-	{
-		name: "c-exec", 
-		code: `$reply[$messageID;yes]
+  {
+    name: "c-exec", 
+    code: `$reply[$messageID;yes]
 
 Created exec slash interaction successfully.
 
