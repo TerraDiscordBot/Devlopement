@@ -1,2 +1,2 @@
 # Welcome 🎉
-This is a discord bot template which is for message content and slash bot for aoi.js
+This is a discord bot template which is for slash bot for aoi.js
