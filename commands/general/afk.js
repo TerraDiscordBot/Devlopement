@@ -44,6 +44,6 @@ Welcome back, you have been afk for $parseDate[$sub[$dateStamp;$getUservar[afkon
 
 $onlyIf[$getUserVar[afk;$authorid]==yes;]`
 
-  },
+  }
   
 ]
