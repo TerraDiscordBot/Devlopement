@@ -28,7 +28,6 @@ $reply[$messageID;yes]
 The member you mentioned is afk, cause "$getUserVar[afkReason;$mentioned[1;no]]" for $parseDate[$sub[$dateStamp;$getUserVar[afkonTime;$mentioned[1;no]]];time] 
 
 $onlyIf[$getUserVar[afkStatus;$mentioned[1;no]]==yes;]`
-
   },
   {
   	name: "$alwaysExecute",
@@ -43,6 +42,5 @@ $reply[$messageID;yes]
 Welcome back, you have been afk for $parseDate[$sub[$dateStamp;$getUservar[afkonTime]];time], reason: $getUserVar[afkReason]
 
 $onlyIf[$getUserVar[afk;$authorid]==yes;]`
-
   }
 ]
