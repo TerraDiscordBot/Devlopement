@@ -1,5 +1,15 @@
 module.exports = [
     {
+        name: "c-sreg",
+        code: `
+        Created poll slash interaction successfully.
+
+        $createApplicationCommand[$guildID;set-register;Set roles to members pick;true;slash;rolePosition:please tell the role position on the embed message.:true:3;roleItself:please pick the role to members take it.:true:8;roleDescription:Show role's description:true:3;roleEmoji:Add emoji to button.:true:3]
+
+        $onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission to create it.]
+        `
+    },
+    {
         $if: 'v4',
         name: "set-register",
         type: 'interaction', 
