@@ -5,7 +5,7 @@ module.exports = [
 
 Created djseval slash interaction successfully.
 
-$createApplicationCommand[$guildID;djs; For evaluating your djs codes.;true;slash;code:enter the code.:true:3]
+$createApplicationCommand[$guildID;djs;For evaluating your djs codes.;true;slash;code:enter the code.:true:3]
 
 $onlyForIDs[$botOwnerID;This command is not for you, it's for my owner(s).]`
   }, 

@@ -25,25 +25,22 @@ $setUserVar[afkOnTime;$dateStamp]`
  	
 $reply[$messageID;yes]
 
-The member you mentioned is afk, cause "$getUserVar[afkReason;$mentioned[1;no]]" for $parseDate[$sub[$dateStamp;$getUserVar[afkonTime;$mentioned[1;no]]];time] 
+The member you mentioned is afk, cause "$getUserVar[afkReason;$mentioned[1;no]]" for $parseDate[$sub[$dateStamp;$getUserVar[afkOnTime;$mentioned[1;no]]];time] 
 
 $onlyIf[$getUserVar[afkStatus;$mentioned[1;no]]==yes;]`
-
   },
   {
   	name: "$alwaysExecute",
   	code: `$deleteIn[10s]
 
-$deleteVar[afkStatus;$authorID]
-$deleteVar[afkReason;$authorID]
-$deleteVar[afkonTime;$authorID]
+$deleteVar[afkStatus;$authorID_$guildID]
+$deleteVar[afkReason;$authorID_$guildID]
+$deleteVar[afkOnTime;$authorID_$guildID]
 
 $reply[$messageID;yes]
 
-Welcome back, you have been afk for $parseDate[$sub[$dateStamp;$getUservar[afkonTime]];time], reason: $getUserVar[afkReason]
+Welcome back, you have been afk for $parseDate[$sub[$dateStamp;$getUservar[afkOnTime]];time], reason: $getUserVar[afkReason]
 
-$onlyIf[$getUserVar[afk;$authorid]==yes;]`
-
-  },
-  
+$onlyIf[$getUserVar[afkStatus;$authorID]==yes;]`
+  }
 ]
