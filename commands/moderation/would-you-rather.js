@@ -14,7 +14,7 @@ $onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission to create it.]`
     type: 'interaction', 
     prototype: 'slash', 
     code: `$sendMessage[{
-            "content":"Would you rather?\\n1. $slashOption[opt1]\\n \\n2. $slashOption[opt2]", 
+            "content":"Would you rather?\\n1. $slashOption[opt1]\\n\\n2. $slashOption[opt2]", 
             "fetchReply" : true, 
             "options": { 
                 "reactions" : ["1️⃣","2️⃣"], 
