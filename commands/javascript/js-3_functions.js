@@ -103,7 +103,7 @@ function toplami(sayi1, sayi2) {
 
 // Fonksiyonu çağırma: 
 sum(3, 6)#SEMI# // 9\`\`\`
-İşlevler, JavaScript'teki temel yapı taşlarından biridir. Bir \`function\', bir görevi gerçekleştirmek veya bir değeri hesaplamak için yeniden kullanılabilir bir ifadeler kümesidir. Fonksiyonlara bir veya daha fazla değer iletilebilir ve yürütmelerinin sonunda bir değer döndürebilir. Bir işlevi kullanmak için, onu kapsam içinde çağırmak istediğiniz bir yerde tanımlamanız gerekir.
+İşlevler, JavaScript'teki temel yapı taşlarından biridir. Bir \`function\`, bir görevi gerçekleştirmek veya bir değeri hesaplamak için yeniden kullanılabilir bir ifadeler kümesidir. Fonksiyonlara bir veya daha fazla değer iletilebilir ve yürütmelerinin sonunda bir değer döndürebilir. Bir işlevi kullanmak için, onu kapsam içinde çağırmak istediğiniz bir yerde tanımlamanız gerekir.
 
 Sağlanan örnek kod, 2 değer alan ve bu sayıların toplamını döndüren bir işlev içerir.}}]
 `
@@ -127,7 +127,7 @@ const rocketToMars = function() {
     return 'BOOM!'#SEMI#
 #LEFT_BRACKET#\`\`\`
 Anonymous functions in JavaScript do not have a name
-property. They can be defined using the function
+property. They can be defined using the **\`function\`**
 keyword, or as an arrow function. See the code example
 for the difference between a named function and an
 anonymous function.}
@@ -214,7 +214,7 @@ function sum(numi, num2) {
 #LEFT_BRACKET#\`\`\`
 Functions return (pass back) values using the **\`return\`** keyword. **\`return\`**  ends function execution and returns the specified value to the location where it was called. A common mistake is to forget the **\`return\`**  keyword, in which case the function will return **\`undefined\`**  by default.}
 
-{field:$customEmoji[tr_git] **TR︱\`dönüş\` Anahtar Kelime
+{field:$customEmoji[tr_git] **TR︱\`return\` Anahtar Kelime**:
 \`\`\`js
 // return ile
 function sum(sayi, sayi2) {
@@ -246,7 +246,7 @@ function add(num1, num2) {
 $customEmoji[circle_git] The **\`function\`** keyword.
 $customEmoji[circle_git] The function name.
 An optional list of parameters separated by commas enclosed by a set of parentheses **\`()\`**.
-A function body enclosed in a set of curly braces **\`{}\`**.}
+A function body enclosed in a set of curly braces **\`{#LEFT_BRACKET#\`**.}
 
 {field:$customEmoji[tr_git] **TR︱Fonksiyon Bildirimi**:
 \`\`\`js
@@ -258,6 +258,6 @@ function add(sayi, sayi2) {
 $customEmoji[circle_git] **\`function\`** anahtar sözcüğü.
 $customEmoji[circle_git] fonksiyon adı.
 Bir dizi parantez **\`()\`** içine alınmış, virgülle ayrılmış isteğe bağlı bir parametre listesi.
-Bir küme parantez **\`{}\`** içine alınmış bir işlev gövdesi.}}]
+Bir küme parantez **\`{#LEFT_BRACKET#\`** içine alınmış bir işlev gövdesi.}}]
 `
 }]
