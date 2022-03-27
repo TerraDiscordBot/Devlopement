@@ -1,31 +1,19 @@
-module.exports = [
-	{
-		name: "c-daily",
-		code: `$reply[$messageID;yes]
-
-Created daily slash interaction successfully.
-		
-$createApplicationCommand[$guildID;daily;Sign for daily.;true;slash]
-		
-		$onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission to create it.]`
-	},
-	{
-		name: "daily", 
-		type: 'interaction', 
-		prototype: 'slash', 
-		code: `$interactionReply[Tap to button to claim your daily!;;{actionRow:{button:Claim it now!:2:daily_$authorID:no:🧋}}]`
-	}, 
-	{
-		type: 'interaction', 
-		prototype: 'button', 
-  	code: `$setUserVar[currency;$sum[$getUserVar[currency];$random[1;10]]]
-
-$interactionUpdate[You have claimed your daily. Come back again tomorrow.;;{actionRow:{button:Claimed.:2:daily_$authorID:yes:🧋}}]
-
-$cooldown[24h;{"content" : "%time% left.","ephemeral" : true,"options" : {"interaction" : true}}]
-
-$onlyif[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{"content" : "This is  <@$advancedTextSplit[$interactionData[customId];_;2]>'s daily.","ephemeral" : true,"options" : {"interaction" : true}}]
-
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==daily;]`
-	}
-]
+module.exports = {
+name: "daily",
+$if: "v4",
+code: `
+$if[$getGlobalUserVar[FirstDaily;$authorID]==False]
+<:Unlocked:899050875719393281> You collected your daily reward of <:RPGCoin:855767372534906920>100.
+$setGlobalUserVar[Coins;$sum[$getGlobalUserVar[Coins];100]]
+$setGlobalUserVar[FirstDaily;False]
+$else
+<:Unlocked:899050875719393281> You collected your daily reward of <:RPGCoin:855767372534906920>100.
+**Congratulations!** You unlocked an achievement: "Your first time"\n+<:RPGCoin:855767372534906920>**100**.
+$setGlobalUserVar[DailyAchievement;<:Unlocked:899050875719393281>]
+$setGlobalUserVar[Coins;$sum[$getGlobalUserVar[Coins];200]]
+$setGlobalUserVar[FirstDaily;False]
+$endif
+$globalCooldown[24h;You have already collected your daily reward today. Please come back in **%time%**.]
+$suppressErrors
+$onlyIf[$isBot[$authorID]!=true;]`
+}
