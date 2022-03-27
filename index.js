@@ -3,12 +3,6 @@ const aoijs = require('aoi.js');
 const config = require('./config.js');
 const bot = new aoijs.Bot(config.Bot);
 const fs = require('fs');
-
-const voice = new aoijs.Voice(bot, {
-  cache: {
-    cacheType: "Memory", 
-    enabled: true,
-  }, 
 });
 
 //Handlers
